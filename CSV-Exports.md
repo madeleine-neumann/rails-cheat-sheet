@@ -9,7 +9,7 @@ def index
 end
 ```
 
-### Model
+### User Model
 ```ruby
 def self.junk_leads_to_csv
   CSV.generate do |csv|
@@ -26,7 +26,7 @@ def self.junk_leads_to_csv
 end
 ```
 
-### View
+### User Index View
 ```ruby
 = link_to "User CSV Export", users_path(format: "csv"), class: "button"
 ```
