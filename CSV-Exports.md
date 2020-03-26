@@ -14,6 +14,10 @@ end
 def self.junk_leads_to_csv
   CSV.generate do |csv|
     csv << %w{ FirstName LastName Email Street Housenumber PostalCode City}
+    # if you need information from another model: 
+    # User.joins(:contract).map do |user|
+    # contract = user.contract
+    # end
 
     User.map do |user|
       csv <<  [user.first_name, user.last_name, user.email, user.street, user.house_number user.postalcode, user.city ]
