@@ -10,6 +10,7 @@ end
 ```
 
 ### Model
+```ruby
 def self.junk_leads_to_csv
   CSV.generate do |csv|
     csv << %w{ FirstName LastName Email Street Housenumber PostalCode City}
@@ -19,6 +20,9 @@ def self.junk_leads_to_csv
     end
   end
 end
+```
 
 ### View
+```ruby
 = link_to "User CSV Export", users_path(format: "csv"), class: "button"
+```
