@@ -40,7 +40,9 @@ end
 ```
 
 ### routes
+```
 get "job_search", to: "jobs#job_search", as: "job_search"
+```
 
 ## haml file for search
 ```ruby
@@ -56,4 +58,22 @@ $(function() {
     source: $('#js-job-autocomplete').data('autocomplete-source'),
   })
 })
+```
+
+### Basic ugly styling
+```sass
+.ui-menu-item
+  +font-regular
+  +fontsize-l
+  background-color: white
+  border: 1px solid black
+  max-width: 310px
+
+
+.ui-menu-item-wrapper
+  max-width: 310px
+  border-bottom: 1px solid black
+
+  &:last-child
+    border-bottom: none
 ```
