@@ -63,8 +63,6 @@ $(function() {
 ### Basic ugly styling
 ```sass
 .ui-menu-item
-  +font-regular
-  +fontsize-l
   background-color: white
   border: 1px solid black
   max-width: 310px
