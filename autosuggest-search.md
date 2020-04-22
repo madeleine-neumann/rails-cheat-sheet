@@ -63,16 +63,34 @@ $(function() {
 
 ### Basic ugly styling
 ```sass
-.ui-menu-item
+.jobsearch
   background-color: white
-  border: 1px solid black
-  max-width: 310px
+  box-shadow: 1px 0px 8px rgba(0,0,0,.3)
+  max-width: 500px
+  margin-top: 30px
 
+  // JqueryUI Element Styles
+  .ui-menu-item
+    background-color: white
+    border-bottom: 1px solid $brand-color
+    cursor: pointer
 
-.ui-menu-item-wrapper
-  max-width: 310px
-  border-bottom: 1px solid black
+    &:last-child
+      border-bottom: none
 
-  &:last-child
-    border-bottom: none
+    &:hover
+      background-color: $brand-color
+      color: $white
+
+  .ui-menu-item-wrapper
+    +font-regular
+    +fontsize-l
+    padding: $default-margin/2
+
+  .ui-menu-item-wrapper
+    border-bottom: 1px solid $brand-color
+
+    &:last-child
+      border-bottom: none
+
 ```
