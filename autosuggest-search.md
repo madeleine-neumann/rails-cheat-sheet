@@ -56,7 +56,8 @@ get "job_search", to: "jobs#job_search", as: "job_search"
 $(function() {
   $("#js-job-autocomplete").autocomplete ({
     source: $('#js-job-autocomplete').data('autocomplete-source'),
-  })
+    // You need this line only, if you would like to scope the styles
+    }).autocomplete("widget").addClass( "jobsearch" );
 })
 ```
 
