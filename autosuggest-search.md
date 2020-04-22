@@ -10,6 +10,18 @@ gem 'jquery-ui-rails'
 ```js
 //= require jquery-ui
 ```
+
+### Job Model
+```ruby
+class Job < ApplicationRecord
+  include PgSearch::Model
+  pg_search_scope :search_for_jobs, against: [:title], using: {
+    tsearch: {prefix: true}
+  }
+
+end
+```
+
 ### This is where the search results should be shown
 ```ruby
 def index
