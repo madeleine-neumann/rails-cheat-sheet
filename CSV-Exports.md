@@ -11,7 +11,7 @@ end
 
 ### User Model
 ```ruby
-def self.junk_leads_to_csv
+def self.to_csv
   CSV.generate do |csv|
     csv << %w{ FirstName LastName Email Street Housenumber PostalCode City}
     # if you need information from another model: 
